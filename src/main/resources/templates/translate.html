@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>Words List</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1>Translater</h1>
+<br/><br/>
+<div>
+  <table border="1">
+    <tr>
+      <th>Russian</th>
+      <th>English</th>
+      <th>Comment</th>
+    </tr>
+    <tr th:each ="translate : ${translates}">
+      <td th:utext="${translate.russian}">...</td>
+      <td th:utext="${translate.english}">...</td>
+      <td th:utext="${translate.comment}">...</td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -11,5 +11,6 @@ public class MVCConfig implements WebMvcConfigurer {
         registry.addViewController("/").setViewName("index");
         registry.addViewController("/translate/eng").setViewName("translate");
         registry.addViewController("/translate/rus").setViewName("translate");
+        registry.addViewController("/translate").setViewName("translate");
     }
 }
